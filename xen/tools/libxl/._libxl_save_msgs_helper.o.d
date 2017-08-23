@@ -1,0 +1,37 @@
+_libxl_save_msgs_helper.o: _libxl_save_msgs_helper.c libxl_osdeps.h \
+ /home/amna/Thesis/xen/xen/tools/libxl/../../tools/libxc/include/xenctrl.h \
+ /home/amna/Thesis/xen/xen/tools/libxl/../../tools/include/xen/xen.h \
+ /home/amna/Thesis/xen/xen/tools/libxl/../../tools/include/xen/xen-compat.h \
+ /home/amna/Thesis/xen/xen/tools/libxl/../../tools/include/xen/arch-arm.h \
+ /home/amna/Thesis/xen/xen/tools/libxl/../../tools/include/xen/domctl.h \
+ /home/amna/Thesis/xen/xen/tools/libxl/../../tools/include/xen/xen.h \
+ /home/amna/Thesis/xen/xen/tools/libxl/../../tools/include/xen/grant_table.h \
+ /home/amna/Thesis/xen/xen/tools/libxl/../../tools/include/xen/hvm/save.h \
+ /home/amna/Thesis/xen/xen/tools/libxl/../../tools/include/xen/hvm/../arch-arm/hvm/save.h \
+ /home/amna/Thesis/xen/xen/tools/libxl/../../tools/include/xen/memory.h \
+ /home/amna/Thesis/xen/xen/tools/libxl/../../tools/include/xen/physdev.h \
+ /home/amna/Thesis/xen/xen/tools/libxl/../../tools/include/xen/physdev.h \
+ /home/amna/Thesis/xen/xen/tools/libxl/../../tools/include/xen/sysctl.h \
+ /home/amna/Thesis/xen/xen/tools/libxl/../../tools/include/xen/domctl.h \
+ /home/amna/Thesis/xen/xen/tools/libxl/../../tools/include/xen/tmem.h \
+ /home/amna/Thesis/xen/xen/tools/libxl/../../tools/include/xen/version.h \
+ /home/amna/Thesis/xen/xen/tools/libxl/../../tools/include/xen/features.h \
+ /home/amna/Thesis/xen/xen/tools/libxl/../../tools/include/xen/event_channel.h \
+ /home/amna/Thesis/xen/xen/tools/libxl/../../tools/include/xen/sched.h \
+ /home/amna/Thesis/xen/xen/tools/libxl/../../tools/include/xen/event_channel.h \
+ /home/amna/Thesis/xen/xen/tools/libxl/../../tools/include/xen/memory.h \
+ /home/amna/Thesis/xen/xen/tools/libxl/../../tools/include/xen/grant_table.h \
+ /home/amna/Thesis/xen/xen/tools/libxl/../../tools/include/xen/hvm/params.h \
+ /home/amna/Thesis/xen/xen/tools/libxl/../../tools/include/xen/hvm/hvm_op.h \
+ /home/amna/Thesis/xen/xen/tools/libxl/../../tools/include/xen/hvm/../xen.h \
+ /home/amna/Thesis/xen/xen/tools/libxl/../../tools/include/xen/hvm/../trace.h \
+ /home/amna/Thesis/xen/xen/tools/libxl/../../tools/include/xen/hvm/../event_channel.h \
+ /home/amna/Thesis/xen/xen/tools/libxl/../../tools/include/xen/xsm/flask_op.h \
+ /home/amna/Thesis/xen/xen/tools/libxl/../../tools/include/xen/xsm/../event_channel.h \
+ /home/amna/Thesis/xen/xen/tools/libxl/../../tools/include/xen/tmem.h \
+ /home/amna/Thesis/xen/xen/tools/libxl/../../tools/include/xen/kexec.h \
+ /home/amna/Thesis/xen/xen/tools/libxl/../../tools/include/xen/platform.h \
+ /home/amna/Thesis/xen/xen/tools/libxl/../../tools/libs/toollog/include/xentoollog.h \
+ /home/amna/Thesis/xen/xen/tools/libxl/../../tools/libxc/include/xenctrl_compat.h \
+ /home/amna/Thesis/xen/xen/tools/libxl/../../tools/libxc/include/xenguest.h \
+ _libxl_save_msgs_helper.h
