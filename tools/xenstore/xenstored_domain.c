@@ -652,6 +652,7 @@ static int dom0_init(void)
         return -1;
 
 	domain_conn_reset(domU);
+    //xenevtchn_notify(xce_handle, domU->port);
 	return 0; 
 }
 

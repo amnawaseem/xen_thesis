@@ -1209,7 +1209,7 @@ configure:8813: $? = 0
 configure:8813: result: yes
 configure:8838: checking for fdt_first_subnode
 configure:8838: aarch64-linux-gnu-gcc -o conftest -g -O2       conftest.c -lfdt -lz -laio  -lutil >&5
-/tmp/ccaSUiMW.o: In function `main':
+/tmp/ccFHk51G.o: In function `main':
 /home/amna/Thesis/xen/xen/xen/tools/conftest.c:60: undefined reference to `fdt_first_subnode'
 collect2: error: ld returned 1 exit status
 configure:8838: $? = 1
@@ -1280,7 +1280,7 @@ configure: failed program was:
 configure:8838: result: no
 configure:8838: checking for fdt_next_subnode
 configure:8838: aarch64-linux-gnu-gcc -o conftest -g -O2       conftest.c -lfdt -lz -laio  -lutil >&5
-/tmp/ccwroX5X.o: In function `main':
+/tmp/cc3sVzgJ.o: In function `main':
 /home/amna/Thesis/xen/xen/xen/tools/conftest.c:60: undefined reference to `fdt_next_subnode'
 collect2: error: ld returned 1 exit status
 configure:8838: $? = 1
