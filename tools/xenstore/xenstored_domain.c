@@ -259,6 +259,7 @@ void handle_event(void)
 
 	if (xenevtchn_unmask(xce_handle, port) == -1)
 		barf_perror("Failed to write to event fd");
+    xprintf("xenstore handle event\n");
 }
 
 bool domain_can_read(struct connection *conn)
