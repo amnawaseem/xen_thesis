@@ -1566,7 +1566,7 @@ static void setup_structure(void)
         manual_node("/local/domain/0/control/feature-halt", NULL);
         manual_node("/local/domain/0/control", "feature-suspend");
         manual_node("/local/domain/0/control/feature-suspend", NULL); 
-        manual_node("/local/domain", "1");
+        /* manual_node("/local/domain", "1");
         manual_node("/local/domain/1", NULL);
         manual_node("/local/domain/1", "device");
         manual_node("/local/domain/1/device", "vif");
@@ -1578,7 +1578,7 @@ static void setup_structure(void)
         manual_node("/local/domain/0/backend/vif", "0");
         manual_node("/local/domain/0/backend/vif/0", "0");
         manual_node("/local/domain/0/backend/vif/0/0", "frontend-id");
-        manual_node("/local/domain/0/backend/vif/0/0/frontend-id", NULL);
+        manual_node("/local/domain/0/backend/vif/0/0/frontend-id", NULL); */
 		check_store();
 	}
 }
@@ -1936,7 +1936,6 @@ static void usage(void)
 static struct option options[] = {
 	{ "no-domain-init", 0, NULL, 'D' },
 	{ "entry-nb", 1, NULL, 'E' },
-    { "domU-init", 0, NULL, 'U' },
 	{ "pid-file", 1, NULL, 'F' },
 	{ "event", 1, NULL, 'e' },
 	{ "master-domid", 1, NULL, 'm' },
@@ -1966,7 +1965,6 @@ int main(int argc, char *argv[])
 	bool dofork = true;
 	bool outputpid = false;
 	bool no_domain_init = false;
-    bool domU_init = false;
 	const char *pidfile = NULL;
 	int timeout;
    // struct xs_handle *xsh;
@@ -1982,9 +1980,6 @@ int main(int argc, char *argv[])
 			break;
 		case 'E':
 			quota_nb_entry_per_domain = strtol(optarg, NULL, 10);
-			break;
-        case 'U':
-			domU_init = true;
 			break;
 		case 'F':
 			pidfile = optarg;
@@ -2099,20 +2094,6 @@ int main(int argc, char *argv[])
 	/* Get ready to listen to the tools. */
 	initialize_fds(*sock, &sock_pollfd_idx, *ro_sock, &ro_sock_pollfd_idx,
 		       &timeout);
-    
-   /* xsh = xs_daemon_open();
-    if (!xsh) {
-        fprintf(stderr, "cannot open xenstore connection\n");
-        exit(1);
-    }
-   
-    if (!xs_write(xsh, XBT_NULL, "/local/domain/0/domid", "0", strlen("0"))) {
-         fprintf(stderr, "cannot set domid for Dom0\n");
-         exit(1);
-    }
-
-    xs_daemon_close(xsh); */
-	/* Tell the kernel we're up and running. */
 	xenbus_notify_running();
 
 #if defined(XEN_SYSTEMD_ENABLED)

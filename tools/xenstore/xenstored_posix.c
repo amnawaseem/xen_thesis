@@ -133,7 +133,7 @@ void *xenbus_map(void)
 	int fd;
 	void *addr;
 
-	fd = open(XENSTORED_KVA_DEV, O_RDWR);
+	fd = open(XENSTORED_KVA_DEV, O_RDWR|O_SYNC);
 	if (fd == -1)
 		return NULL;
 
@@ -153,7 +153,7 @@ void *xenbus_map_foreign(void)
 	int fd;
 	void *addr;
 
-	fd = open(XENSTORED_KVA_DEV_FOREIGN, O_RDWR);
+	fd = open(XENSTORED_KVA_DEV_FOREIGN, O_RDWR|O_SYNC);
 	if (fd == -1)
 		return NULL;
 

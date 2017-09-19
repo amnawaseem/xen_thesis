@@ -626,12 +626,13 @@ static int dom0_init(void)
 		return -1;
 
 	talloc_steal(dom0->conn, dom0); 
-
+    domain_conn_reset(dom0);
 	xenevtchn_notify(xce_handle, dom0->port);
-//DomU introduction to xenstore
+    
+    //DomU introduction to xenstore
 	domU = find_domain_by_domid(1);
 
-	if (domU == NULL) {
+	 if (domU == NULL) {
 		
 
 		/* Hang domain off "in" until we're finished. */
@@ -641,17 +642,17 @@ static int dom0_init(void)
 		}
         domU->mfn = 0xfee45000 >> 12;
         domU->interface = xenbus_map_foreign();
-		
+		if (domU->interface == NULL) {
+			return -1;
+		}
 
 		/* Now domain belongs to its connection. */
 		talloc_steal(domU->conn, domU);
 
 		fire_watches(NULL, "@introduceDomain", false);
 	} 
-    else
-        return -1;
 
-	domain_conn_reset(domU);
+	domain_conn_reset(domU); 
     //xenevtchn_notify(xce_handle, domU->port);
 	return 0; 
 }
